@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
+	<title>Ресурсы для дизайнеров</title>
+	<style>
+		body{
+			background: url("Slide 16_9 - 1.jpg") no-repeat;
+			background-size: 100%;
+			font-family: 'Commissioner', sans-serif;
+			zoom: 50%;
+			color: #573B3B;
+			cursor: url(cursorname_1.cur), pointer;
+		}
+		html { 
+			overflow-y: hidden;
+			 }
+		::selection {
+    		background: #809778; /* Цвет фона */
+    		color: #fff; /* Цвет текста */
+   		}
+		.content_frame{
+			top: 133px;
+			left: 1100px;
+			position: relative;
+			padding: 50px;
+			width: 794px;
+			height: 1365px;
+			font-size: 100px;
+			font-family: 'Marck Script', cursive;
+			background: #ECEEF0;
+			border-radius: 0px 0px 10px 0px;
+			line-height: 1;
+			color: #4D1616;
+		}
+		.bookmark{
+			position: absolute;
+			width: 100px;
+			height: 150px;
+			background: #DAD6CD;
+			box-shadow: inset 5px 15px 15px rgba(192, 181, 164, 0.59);
+			border-radius: 0px 15px 15px 0px;
+			transition: width .3s ease;
+			position: absolute;
+			display: block;
+			transition: box-shadow .3s linear, background .3s linear;;
+		}
+		.bookmark:hover{
+			box-shadow: none;
+			width: 150px;
+			background: #ECEEF0;
+			box-shadow: inset 5px 15px 15px rgba(192, 181, 164, 0.59);
+		}
+		.bookmark:hover .bookmark_title{
+			opacity: 1;
+			transform: translate(300px);
+		}
+		.bookmark:hover i{
+			transform: rotate(90deg);
+			color: inherit;
+		}
+		.bookmark.active i{
+			color: inherit;
+			/*#573B3B*/
+		}
+		i{
+			font-size: 60px;
+			width: 90%;
+			color: #fff;
+			position: absolute;
+			top: 20%;
+			text-align: center;
+			transition: transform .3s ease;
+			pointer-events: none;
+		}
+		.bookmark_title{
+			text-transform: capitalize;
+			font-size: 80px;
+			opacity: 0;
+			font-weight: bold;
+			font-family: 'Marck Script', cursive;
+			transition: opacity .3s ease, transform .5s ease;
+			color: #573B3B;
+		}
+		.bookmark_text{
+			visibility: hidden;
+		}
+		.active{
+			box-shadow: none !important;
+			background: #ECEEF0;
+			transition: background .3s linear;
+		}
+		#a{
+			left: 2000px;
+			top: 140px;
+			box-shadow: inset 5px 0px 15px rgba(192, 181, 164, 0.59);
+		}
+		#a:hover{
+			box-shadow: none;
+		}
+		#b{
+			left: 2000px;
+			top: 290px;
+		}
+		#c{
+			left: 2000px;
+			top: 440px;
+		}
+		#d{
+			left: 2000px;
+			top: 590px;
+		}
+		#e{
+			left: 2000px;
+			top: 740px;
+		}
+		#f{
+			left: 2000px;
+			top: 890px;
+		}
+		#g{
+			left: 2000px;
+			top: 1040px;
+		}
+		#h{
+			left: 2000px;
+			top: 1190px;
+		}
+		a{
+			cursor:pointer;
+			color:inherit;
+			text-decoration:inherit;
+			opacity:0.7; 
+		    border-bottom: 0.05em solid;
+		    border-color: rgba(55,53,47,0.4);
+		    font-family: 'Commissioner', sans-serif;
+		    font-size: 40px;
+		}
+		a:hover{
+			opacity: 1;
+		}
+		.text_color{
+			background-color: #28356A;
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			border: 10px solid #fff;
+			position: fixed;
+			top: 30px;
+			right: 30px;
+			cursor: pointer;
+		}
+		.bg_color{
+			background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+			height: 90px;
+			width: 90px;
+			border-radius: 50%;
+			border: 10px solid #28356A;
+			position: fixed;
+			top: 130px;
+			right: 35px;
+			cursor: pointer;
+
+		}
+		.button_div:hover .color_code{
+			opacity: 1;
+			transform: translate(-130%);
+			display: block;
+		}
+		.button_div{
+			height: 100px;
+			width: 250px;
+			position: absolute;	
+			top: 125px;
+			right: 50px;
+
+		}
+		.color_code{
+			background-color: #fff;
+			width: 320px;
+			height: 80px;
+			position: fixed;
+			border-radius: 10px;
+			border: 3px solid #020f75;
+			transform: translate(100%);
+			top: 130px;
+			transition: opacity .2s linear, transform .2s;
+			font-size: 70px;
+			font-family: 'Commissioner', sans-serif;
+			text-align: center;
+		}
+		.bColor{
+			color: #28356A;
+		}
+		.close_color{
+			height: 90px;
+			width: 90px;
+			border: none;
+			background-color: none;
+			position: fixed;
+			top: 270px;
+			right: 45px;
+			cursor: pointer;
+		}
+		#bubble{
+			right: 150px;
+			position: fixed;
+			top: 230px;
+		}
+
+		.copy_title p{
+			font-size: 30px;
+			display: block;
+			top: 260px;
+			right: 155px;
+			position: fixed;
+			z-index: 1;
+		}
+		.copy_title{
+			opacity: 0;
+			transition: opacity .2s linear;
+		}
+		.material-icons{
+			position: absolute;
+			font-size: 5em;
+			top: 200px;
+			right: 1160px;
+			z-index: 1;
+			color: #4D1616;
+
+		}
+		.material-icons:hover{
+			opacity: 0.8;
+			color: inherit;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- <button class="text_color"></button> -->
+  
+
+	<div class="button_div">
+		<div class="bg_color">
+			<span class="color_code">#000000</span>
+		</div>
+		<div class="copy_title">
+			
+  <p>Скопировано в буфер обмена</p>
+
+		
+		<svg id="bubble" width="430" height="126" viewBox="0 0 430 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="33" width="430" height="93" rx="10" fill="#C4C4C4"/>
+<path d="M210.937 2.66396C212.932 -0.116927 217.068 -0.116928 219.063 2.66396L244.83 38.5857C247.203 41.894 244.839 46.5 240.767 46.5H189.233C185.161 46.5 182.797 41.894 185.17 38.5857L210.937 2.66396Z" fill="#C4C4C4"/>
+</svg>
+
+
+</div>
+	</div>
+	<button class="close_color">
+				<svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4L64 64" stroke="#28356A" stroke-width="7" stroke-linecap="round"/>
+<path d="M64 4L4 64" stroke="#28356A" stroke-width="7" stroke-linecap="round"/>
+</svg>
+</button>
+		<div class="material-icons">reply</div>
+	<div class="content_frame">Ресурсы для дизайнеров 
+		<br>
+		<a href="https://www.notion.so/0b1746d4e67e4fe4b11746e49f83acde" target="_blank" title="Ещё больше здесь">💎</a>
+		<a href="https://www.notion.so/89674c9ae08e484695a2a4a0e92db6d1" target="_blank" title="Тренировка насмотренности">💛</a>
+		<a href="https://www.notion.so/27f4bcccd34a494e85141592a07fe0b0" target="_blank" title="Как реагировать на критику">👿</a>
+		<a href="https://drive.google.com/file/d/1cDm-QNQnNzEUpZb98a64NTeQV8NqcWK7/view" target="_blank" title="Упаковка инстаграм аккаунта">🟪</a>
+		<a href="https://docs.google.com/document/d/1W2HBKwhtKhEfovET6vEnRddAm8wAEw0S9KkPHbPxzis/preview?pru=AAABenfgHEA*fleMdYfvIJIZvhk6RDamJw" target="_blank" title="Бриф шаблон">🟦</a>
+		<a href="https://drive.google.com/file/d/1rKizL_s6fdJMXdMiwSgzqnbq0ZkzPIW1/view" target="_blank" title="Материалы от скилл бокс">🔵</a>
+		<a href="https://logomachine.notion.site/logomachine/Figma-da6e23e56f674d5d885eba72c1149c41" target="_blank" title="плагины для фигмы">🖊️</a>
+	</div>
+
+					<div class="book_marks">
+		<div class="bookmark" id="a">
+			<i class="fas fa-star"></i>
+			<div class="bookmark_title">Вдохновение</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="http://logomachine.ru/"	target="_blank" title="Студия дизайна Логомашина:)"&gt;
+						logomachine.ru 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://clay.global/"	target="_blank" title="Lorem ipsum dolor sit amet consectetur, adipisicing elit."&gt;
+						clay.global 
+					&lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://elements.envato.com/ru/"	target="_blank" title="всякое"&gt;
+						elements.envato.com
+					&lt;/a&gt;
+				&lt;/div&gt;
+
+			&lt;div&gt;
+					&lt;a href="https://dribbble.com/"	target="_blank" title="макеты сайтов"&gt;
+						dribbble.com
+					&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;div&gt;
+					&lt;a href="https://www.behance.net/"	target="_blank" title="графика"&gt;
+						behance.net
+					&lt;/a&gt;
+				&lt;/div&gt;
+			</div>
+		</div>
+					
+		<div class="bookmark" id="b" >
+			<i class="far fa-square"></i>
+			<div class="bookmark_title">Иконки</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2"	target="_blank" title="Иконки как шрифт"&gt;
+						fontawesome.com 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="http://femmebot.github.io/Gutenberg-SVG/"	target="_blank" title="Проект Гутенберг SVG-иллюстрации"&gt;
+						femmebot.github.io 
+					&lt;/a&gt;
+
+				&lt;/div&gt;</div>
+		</div>
+					
+		<div class="bookmark" id="c">
+			<i class="fas fa-dice-d6"></i>
+			<div class="bookmark_title">Мокапы</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://smartmockups.com/"	target="_blank" title="не нужно скачивать, ставляется само"&gt;
+						smartmockups.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://clay.global/"	target="_blank" title="Lorem ipsum dolor sit amet consectetur, adipisicing elit."&gt;
+						clay.global 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			&lt;div&gt;
+					&lt;a href="https://clay.global/"	target="_blank" title="Lorem ipsum dolor sit amet consectetur, adipisicing elit."&gt;
+						clay.global 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			</div>
+		</div>
+		 <div class="bookmark" id="d" >
+		 	<i class="fas fa-star-half-alt"></i>
+			<div class="bookmark_title">Шрифты</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				
+
+				&lt;div&gt;
+					&lt;a href="https://elements.envato.com/ru/fonts"	target="_blank" title="здесь только найти, скачать на других придётся"&gt;
+						elements.envato.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			
+			&lt;div&gt;
+					&lt;a href="https://femmebot.github.io/google-type/"	target="_blank" title="шрифтовые пары и примеры их использования"&gt;
+						femmebot.github.io
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			</div>
+		</div> 
+		<div class="bookmark" id="e">
+			<i class="fas fa-square"></i>
+			<div class="bookmark_title">Фотостоки</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://www.pexels.com/"	target="_blank" title="фото и видео"&gt;
+						pexels.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://unsplash.com/"	target="_blank" title="поиск и на русском"&gt;
+						unsplash.com
+					&lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://icons8.com/"	target="_blank" title="есть редактор фото и иконки"&gt;
+						icons8.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://pixabay.com/"	target="_blank" title=" "&gt;
+						pixabay.com 
+					&lt;/a&gt;
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://picography.co/"	target="_blank" title=" "&gt;
+						picography.co
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://www.istockphoto.com/" target="_blank" title=" "&gt;
+						istockphoto.com
+					&lt;/a&gt;
+				&lt;/div&gt;
+
+			&lt;div&gt;
+					&lt;a href="https://ru.freepik.com/"	target="_blank" title="есть вектор и растр "&gt;
+						freepik.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="http://thestocks.im/" target="_blank" title="нужна регистрация "&gt;
+						thestocks.im
+					&lt;/a&gt;
+				&lt;/div&gt;
+			</div>
+		</div>
+		<div class="bookmark" id="f">
+			<i class="fas fa-palette"></i>
+			<div class="bookmark_title">Цвет</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://htmlcolorcodes.com/color-picker/"	target="_blank" title="раздел сайта thestocks"&gt;
+						htmlcolorcodes.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://clay.global/"	target="_blank" title="Lorem ipsum dolor sit amet consectetur, adipisicing elit."&gt;
+						clay.global 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			</div>
+		</div>
+		<div class="bookmark" id="g">
+			<i class="fas fa-ellipsis-h"></i>
+			<div class="bookmark_title">Остальное</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://validator.w3.org/" target="_blank" title="Поиск ошибок в коде"&gt;
+						validator.w3.org
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://swiperjs.com/get-started" target="_blank" title="Подключение слайдера на сайт"&gt;
+						swiperjs.com 
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="https://thispersondoesnotexist.com/" target="_blank" title="Генерация несуществующих лиц"&gt;<!-- https://thisxdoesnotexist.com/ -->
+						thispersondoesnotexist.com
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+						&lt;a href="https://github.com/" target="_blank" title="сайт для хранения кода"&gt;
+							github.com
+						&lt;/a&gt;
+
+					&lt;/div&gt;
+				
+				&lt;div&gt;
+						&lt;a href="https://caninclude.glitch.me/" target="_blank" title="проверка правильности вложенности тегов"&gt;
+							caninclude.glitch.me
+						&lt;/a&gt;
+
+					&lt;/div&gt;
+
+					&lt;div&gt;
+						&lt;a href="https://codepen.io/" target="_blank" title="для проверки работы кусков кода"&gt;
+							codepen.io
+						&lt;/a&gt;
+
+					&lt;/div&gt;
+
+					&lt;div&gt;
+					&lt;a href="https://tympanus.net/Development/IconHoverEffects/#set-9" target="_blank" title="различные css эффекты для иконок"&gt;
+						tympanus.net
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				
+			</div>
+		</div>
+		<div class="bookmark" id="h">
+			<i class="fas fa-shapes"></i>
+			<div class="bookmark_title">Фриланс-биржи</div>
+			<div class="bookmark_text">
+				&lt;hr&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						YouDo
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Work-zilla
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Яндекс.Услуги
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Freelancehunt
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Фрилансим
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Kwork
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Weblancer
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						Frelance.ru
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+
+				&lt;div&gt;
+					&lt;a href="/"	target="_blank" title="нужно просмотреть"&gt;
+						frelancejob.ru
+					&lt;/a&gt;
+
+				&lt;/div&gt;
+			</div>
+		</div>
+					</div>
+	<script> 
+		
+		const bookMarks = document.querySelector('.book_marks');
+		const contentFrame = document.querySelector(".content_frame");
+		var firstPage = contentFrame.innerHTML;
+		var backArrow = document.querySelector('.material-icons');
+
+		backArrow.onclick=function(e)
+		{
+			contentFrame.innerHTML=firstPage;
+			for(let i = 0; i < bookMarks.children.length; i++)
+	  		{
+	   		 bookMarks.children[i].classList.remove('active');
+			  }	
+		}
+
+		bookMarks.onclick=function(e)
+		{
+	  		for(let i = 0; i < bookMarks.children.length; i++)
+	  		{
+	   		 bookMarks.children[i].classList.remove('active');
+			  }
+			e.target.classList.add('active');
+
+			contentFrame.innerHTML=e.target.textContent;
+		
+		}
+		 let elements = document.querySelectorAll('div');
+// 		var textColor = document.querySelector(".text_color");
+
+
+// 		     textColor.addEventListener("click", () => {
+//         for(var i=0;i<elements.length;i++)
+//       elements[i].classList.toggle('bColor');
+//   });
+	
+var bgColor = document.querySelector('.bg_color');
+var ColorCode = document.querySelector('.color_code');
+var copyTitle = document.querySelector('.copy_title');
+
+bgColor.addEventListener("click", () => {
+
+	var color = '#' + Math.random().toString(16).slice(3, 9);
+        for(var i=0;i<elements.length;i++)
+  	elements[i].style.color=color;
+  	ColorCode.innerHTML=color;
+  	navigator.clipboard.writeText(color);
+  	copyTitle.style.opacity=0.7;
+  });
+
+bgColor.onmouseout = function() {
+	copyTitle.style.opacity = 0;
+};	
+
+
+var firstColor = document.querySelector('.close_color');
+firstColor.addEventListener("click", () => {
+        for(var i=0;i<elements.length;i++)
+      elements[i].style.color = "#573b3b";
+	ColorCode.innerHTML="#573b3b";
+  });
+</script>
+</body>
+</html>
